@@ -1,0 +1,6 @@
+routes:
+  "https://{default}/":
+    type: upstream
+    upstream: "proxy:http"
+    cache:
+      enabled: false
