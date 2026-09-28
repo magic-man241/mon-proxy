@@ -1,3 +1,15 @@
+applications:
+  proxy:
+    type: "nodejs:20"
+    source:
+      root: "/"
+    hooks:
+      build: |
+        npm install
+    web:
+      commands:
+        start: "node server.js"
+
 routes:
   "https://{default}/":
     type: upstream
